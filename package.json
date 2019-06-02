@@ -9,7 +9,7 @@
     "webpack": "^4.32.2"
   },
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --host $IP --port $PORT --config webpack.config.js --progress --hot",
+    "start": "webpack-dev-server --config webpack.config.js --inline",
     "development": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "test": "react-scripts test",

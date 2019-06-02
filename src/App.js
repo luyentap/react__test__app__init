@@ -1,10 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Test from "./Test";
 
 function App() {
   return (
     <div className="App">
+      {console.log("app component render")}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,8 +20,10 @@ function App() {
         >
           Learn React
         </a>
-        <p>edit this d</p>
+        <p>edit this h</p>
       </header>
+
+      <Test/>
     </div>
   );
 }

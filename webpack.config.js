@@ -54,11 +54,12 @@ const config = {
             test:/\.css$/,
             use:['style-loader','css-loader'] //vẫn đang bị lỗi sass-loader-->chưa use sass
         },
-      {
-        test: /\.js$/,
-        exclude: [/node_modules/,/index.js/,/serviceWorker.js/],
-        use: ["eslint-loader"]
-      }
+
+      // {
+      //   test: /\.js$/,
+      //   exclude: [/node_modules/,/index.js/,/serviceWorker.js/],
+      //   use: ["eslint-loader"]
+      // }
     ]
   },
   plugins: [
@@ -76,8 +77,17 @@ const config = {
   //fix for c9.io : check host:Invalid Host header
   devServer: {
     compress: true,
-    disableHostCheck: true
+    disableHostCheck: true,
+
+    //hot reload
+    port: 8080,
+    hot: true,
+    inline: true,
+    publicPath: '/',
  }  
 }
 
 module.exports = config;
+//doc them:https://viblo.asia/p/nhung-van-de-nham-lan-khi-su-dung-webpack-maGK7WdaKj2
+//webpack-dev-server  --hot(load all page) khac --inline(khong toan bo trang)
+//(link ghi sai)
