@@ -53,7 +53,12 @@ const config = {
             {
             test:/\.css$/,
             use:['style-loader','css-loader'] //vẫn đang bị lỗi sass-loader-->chưa use sass
-        }
+        },
+      {
+        test: /\.js$/,
+        exclude: [/node_modules/,/index.js/,/serviceWorker.js/],
+        use: ["eslint-loader"]
+      }
     ]
   },
   plugins: [
